@@ -1,7 +1,15 @@
-import { CallbackQueryContext, Context, InlineKeyboard } from "grammy";
+import {
+  CallbackQueryContext,
+  CommandContext,
+  Context,
+  InlineKeyboard,
+} from "grammy";
 
-export async function selectRegions(ctx: CallbackQueryContext<Context>) {
-  ctx.deleteMessage();
+export async function selectRegions(
+  ctx: CallbackQueryContext<Context> | CommandContext<Context>
+) {
+  const isCallback = ctx.callbackQuery?.data;
+  if (isCallback) ctx.deleteMessage();
 
   const text = `*Available Regions*: \`05\``;
   const keyboard = new InlineKeyboard()
