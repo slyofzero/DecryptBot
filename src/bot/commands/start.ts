@@ -2,7 +2,7 @@ import { cleanUpBotMessage } from "@/utils/bot";
 import { CommandContext, Context, InlineKeyboard, InputFile } from "grammy";
 
 export async function startBot(ctx: CommandContext<Context>) {
-  const text = `Welcome to \`$Decentralized Private Network\`. Our Telegram bot specializes in offering *GPU-Enabled AI Servers* for purchase. Discover a variety of *Geographical Regions* to choose from, all offered at *Competitive Prices*. Dive into the world of High-Speed DCP Servers today.`;
+  const text = `Step into the realm of \`$Decentralized Private Network\`. Our Telegram bot is your gateway to accessing GPU-Enabled AI Servers for purchase. Explore a diverse range of *Geographical Regions*, each boasting *Competitive Prices*. Immerse yourself in the realm of *High-Speed DCP Servers* today.`;
 
   const startImage = new InputFile("./src/images/start.jpeg");
   const keyboard = new InlineKeyboard().text(
